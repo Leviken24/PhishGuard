@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhishGuard | Professional URL & Spam Protection</title>
+    <meta name="description" content="Protect yourself from phishing, fake URLs, and spam messages with PhishGuard's advanced heuristic analysis." />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Navigation -->
+      <header class="glass-nav">
+        <div class="container">
+          <div class="logo">Phish<span>Guard</span></div>
+          <nav>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#scanner">Live Scanner</a></li>
+              <li><a href="#dashboard">Dashboard Preview</a></li>
+            </ul>
+          </nav>
+          <div class="nav-cta">
+            <a href="#scanner" class="btn-outline">Try Free</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+          <canvas id="cyber-bg"></canvas>
+          <div class="container hero-container">
+            <div class="hero-content">
+              <span class="badge">Next-Gen Threat Intelligence</span>
+              <h1 class="hero-title">Zero-Trust Scam Intelligence. <span class="highlight">Shield Your Identity.</span></h1>
+              <p class="hero-subtitle">Instantly analyze suspicious links, phishing attempts, and SMS spam messages using advanced heuristic modeling.</p>
+              <div class="hero-actions">
+                <a href="#scanner" class="btn-primary btn-glow">Launch Live Scanner</a>
+                <a href="#dashboard" class="btn-secondary">Explore Dashboard</a>
+              </div>
+            </div>
+            <div class="hero-graphic">
+              <div class="shield-wrapper">
+                <svg class="shield-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Definitions for gradients -->
+                  <defs>
+                    <linearGradient id="shield-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#00e5ff" />
+                      <stop offset="100%" stop-color="#a855f7" />
+                    </linearGradient>
+                    <linearGradient id="glow-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.3" />
+                      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.0" />
+                    </linearGradient>
+                    <filter id="glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="8" result="blur" />
+                      <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+
+                  <!-- Animated Outer Orbit Ring -->
+                  <circle class="orbit-ring" cx="200" cy="200" r="170" stroke="url(#shield-grad)" stroke-width="1.5" stroke-dasharray="10 30" />
+                  
+                  <!-- Counter-Rotating Inner Orbit Ring -->
+                  <circle class="orbit-ring-reverse" cx="200" cy="200" r="140" stroke="#00e5ff" stroke-width="1" stroke-dasharray="120 15 30 15" stroke-opacity="0.6" />
+
+                  <!-- Shield Shape -->
+                  <path class="shield-frame" d="M200 60C240 60 300 70 320 100C320 190 280 270 200 320C120 270 80 190 80 100C100 70 160 60 200 60Z" 
+                        fill="url(#glow-grad)" stroke="url(#shield-grad)" stroke-width="4" filter="url(#glow-filter)" />
+
+                  <!-- Internal Shield Details -->
+                  <path d="M200 80C225 80 280 90 295 115C295 180 260 250 200 290C140 250 105 180 105 115C120 90 175 80 200 80Z" 
+                        stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+
+                  <!-- Grid Pattern overlay inside shield -->
+                  <path d="M150 100 H250 M130 140 H270 M115 180 H285 M112 220 H288 M125 260 H275" stroke="rgba(0, 229, 255, 0.1)" stroke-width="1" />
+                  <path d="M160 100V280 M200 80V300 M240 100V280" stroke="rgba(0, 229, 255, 0.1)" stroke-width="1" />
+
+                  <!-- Glowing Core -->
+                  <circle class="core-glow" cx="200" cy="180" r="24" fill="#00e5ff" filter="url(#glow-filter)" fill-opacity="0.8" />
+                  <circle cx="200" cy="180" r="8" fill="#ffffff" />
+                  
+                  <!-- Core Neural Connections / Cyber Lines -->
+                  <path class="pulse-line" d="M200 180 L160 140" stroke="#00e5ff" stroke-width="2" stroke-dasharray="10 10" />
+                  <path class="pulse-line" d="M200 180 L240 140" stroke="#00e5ff" stroke-width="2" stroke-dasharray="10 10" />
+                  <path class="pulse-line" d="M200 180 L200 240" stroke="#a855f7" stroke-width="2" stroke-dasharray="10 10" />
+                  
+                  <!-- Neural Nodes -->
+                  <circle cx="160" cy="140" r="4" fill="#ffffff" filter="url(#glow-filter)" />
+                  <circle cx="240" cy="140" r="4" fill="#ffffff" filter="url(#glow-filter)" />
+                  <circle cx="200" cy="240" r="4" fill="#ffffff" filter="url(#glow-filter)" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+          <div class="container">
+            <div class="section-header">
+              <span class="label">Platform Capabilities</span>
+              <h2>Next-Gen Scam Prevention Engine</h2>
+            </div>
+            <div class="features-grid">
+              <!-- Card 1: Phishing Detection -->
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon-cyber">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M12 8v4"/>
+                    <path d="M12 16h.01"/>
+                  </svg>
+                </div>
+                <h3>Phishing Shield</h3>
+                <p>Identify active credential-harvesting forms and social engineering tactics targeting personal details.</p>
+              </div>
+
+              <!-- Card 2: Spam SMS Analysis -->
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon-cyber">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    <path d="M8 10h.01"/>
+                    <path d="M12 10h.01"/>
+                    <path d="M16 10h.01"/>
+                  </svg>
+                </div>
+                <h3>Spam SMS Analyzer</h3>
+                <p>Scan SMS, chats, and notifications for urgent phrasing, bank fraud, and suspicious cash alerts.</p>
+              </div>
+
+              <!-- Card 3: Fake URL Detection -->
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon-cyber">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                  </svg>
+                </div>
+                <h3>Fake URL Detection</h3>
+                <p>Expose typosquatting, Punycode injection, lookalike domains, and suspicious redirects instantly.</p>
+              </div>
+
+              <!-- Card 4: QR Scam Checker -->
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon-cyber">
+                    <rect x="3" y="3" width="7" height="7"/>
+                    <rect x="14" y="3" width="7" height="7"/>
+                    <rect x="14" y="14" width="7" height="7"/>
+                    <rect x="3" y="14" width="7" height="7"/>
+                    <path d="M7 7h.01 M17 7h.01 M7 17h.01"/>
+                  </svg>
+                </div>
+                <h3>QR Scam Checker</h3>
+                <p>Analyze QR code payloads to prevent malicious redirections to fake mobile landing portals.</p>
+              </div>
+
+              <!-- Card 5: AI Threat Analysis -->
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon-cyber">
+                    <rect x="3" y="11" width="18" height="2" rx="1"/>
+                    <path d="M12 2v20"/>
+                    <path d="M20 12h2 M2 12h2 M12 20h2 M12 2h2"/>
+                    <circle cx="12" cy="12" r="4" fill="rgba(0,229,255,0.2)"/>
+                  </svg>
+                </div>
+                <h3>AI Threat Intelligence</h3>
+                <p>Utilize lightweight, local heuristic networks to intercept zero-day fraud structures in real time.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Live Scanner Section -->
+        <section id="scanner" class="scanner-section">
+          <div class="container">
+            <div class="section-header">
+              <span class="label">Interactive Scanner</span>
+              <h2>Analyze a Threat in Real-Time</h2>
+            </div>
+            
+            <div class="scanner-box">
+              <div class="scanner-tabs">
+                <button class="tab-btn active" data-tab="url">URL Scanner</button>
+                <button class="tab-btn" data-tab="message">Message Analyzer</button>
+              </div>
+
+              <!-- URL Scanner tab content -->
+              <div class="tab-content active" id="url-tab">
+                <div class="input-wrapper">
+                  <input type="text" id="url-input" placeholder="Paste URL here (e.g., g00gle.xyz)" autocomplete="off" />
+                  <button id="scan-url-btn" class="btn-primary">Scan Link</button>
+                </div>
+                <div id="url-result" class="result-box hidden"></div>
+              </div>
+
+              <!-- Message Analyzer tab content -->
+              <div class="tab-content" id="message-tab">
+                <div class="input-wrapper vertical">
+                  <textarea id="message-input" placeholder="Paste suspicious SMS, email, or message text here..."></textarea>
+                  <button id="scan-msg-btn" class="btn-primary">Analyze Context</button>
+                </div>
+                <div id="msg-result" class="result-box hidden"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dashboard Preview Section -->
+        <section id="dashboard" class="dashboard-section">
+          <div class="container">
+            <div class="section-header">
+              <span class="label">SaaS Preview</span>
+              <h2>Real-time Threat Monitoring</h2>
+            </div>
+
+            <!-- Mock Dashboard Card Container -->
+            <div class="dashboard-mock">
+              <!-- Window Header -->
+              <div class="mock-header">
+                <div class="window-controls">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="mock-title">PhishGuard Threat Intelligence console</div>
+              </div>
+
+              <div class="mock-body">
+                <!-- Sidebar -->
+                <aside class="mock-sidebar">
+                  <div class="sidebar-item active">📊 Overview</div>
+                  <div class="sidebar-item">🛡️ Active Shields</div>
+                  <div class="sidebar-item">📜 Threat Logs</div>
+                  <div class="sidebar-item">⚙️ Settings</div>
+                </aside>
+
+                <!-- Content Area -->
+                <div class="mock-content">
+                  <!-- Metrics Grid -->
+                  <div class="metrics-grid">
+                    <div class="metric-card">
+                      <div class="metric-label">Threats Stopped</div>
+                      <div class="metric-value text-glow-red">1,482</div>
+                      <div class="metric-change positive">+12% this week</div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-label">Scan Volume</div>
+                      <div class="metric-value">48,924</div>
+                      <div class="metric-change">+254 today</div>
+                    </div>
+                    <div class="metric-card">
+                      <div class="metric-label">False Positive Rate</div>
+                      <div class="metric-value">0.02%</div>
+                      <div class="metric-change negative">-5% decrease</div>
+                    </div>
+                  </div>
+
+                  <!-- Logs Section -->
+                  <div class="recent-logs">
+                    <h4>Recent Detection Logs</h4>
+                    <div class="log-table">
+                      <div class="log-row header">
+                        <div>Source Type</div>
+                        <div>Target payload</div>
+                        <div>Risk Assessment</div>
+                      </div>
+                      <div class="log-row">
+                        <div><span class="badge-type msg">SMS</span></div>
+                        <div class="log-payload">"URGENT: Your account has been suspended..."</div>
+                        <div><span class="risk-badge danger">CRITICAL</span></div>
+                      </div>
+                      <div class="log-row">
+                        <div><span class="badge-type url">URL</span></div>
+                        <div class="log-payload">support-paypal-verification.xyz</div>
+                        <div><span class="risk-badge danger">CRITICAL</span></div>
+                      </div>
+                      <div class="log-row">
+                        <div><span class="badge-type url">URL</span></div>
+                        <div class="log-payload">github.com</div>
+                        <div><span class="risk-badge safe">SAFE</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer Section -->
+      <footer class="footer-section">
+        <div class="container footer-content">
+          <div class="footer-brand">
+            <div class="logo">Phish<span>Guard</span></div>
+            <p>Heuristic-based cyber threat identification platform.</p>
+          </div>
+          <div class="footer-links">
+            <a href="#features">Features</a>
+            <a href="#scanner">Scanner</a>
+            <a href="#dashboard">Dashboard</a>
+          </div>
+          <div class="footer-copyright">
+            <p>&copy; 2026 PhishGuard. Built with precision styling.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
